@@ -23,7 +23,7 @@ class ZeroCapturer: public node_webrtc::FakeAudioDevice::Capturer {
   }
 
   virtual bool Capture(rtc::BufferT<int16_t>*) {
-    return false;
+    return true;
   }
 
   static std::unique_ptr<ZeroCapturer> Create(int sampling_frequency_in_hz) {
